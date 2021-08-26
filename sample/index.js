@@ -11,12 +11,12 @@ app.use(express.static(path.join(__dirname,"public")));
 //});
 app.post("/api/v1/quiz", function (req, res) {
     const answer = req.body.answer;
-    if(answer=== "2"){
+    if(answer=== " "){
         //res.send("<h1>正解</h1>");
-        res.redirect("/correct.html");
+        res.redirect("/wrong.html");
     } else{
         //res.send("<h1>不正解</h1>");
-        res.redirect("/wrong.html");
+        res.redirect("/correct.html");
      }    
 
     
